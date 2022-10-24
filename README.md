@@ -1,4 +1,4 @@
-# Git ExpertApp
+# Hooks App
 
 ## Install Dependencies
 
