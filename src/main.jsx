@@ -17,11 +17,14 @@ import { Padre } from "./07-tarea-memo/Padre";
 import { TODOApp } from "./08-useReducer/TODOApp";
 import { RouterProvider } from "react-router-dom";
 import router from "./routes/Router";
+import { UserProvider } from "./09-useContext/context/UserProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   //<React.StrictMode>
   <div className="container-fluid">
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </div>
   // </React.StrictMode>
 );
