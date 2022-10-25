@@ -2,18 +2,19 @@ import React from "react";
 import { useForm } from "../../hooks/useForm";
 
 export const TodoAdd = ({ onAddTodo }) => {
-  const { description, onInputChangeForm } = useForm({
+  const { description, onInputChangeForm, onResetForm } = useForm({
     description: "",
   });
 
   const onNewTodo = (e) => {
     e.preventDefault();
-    if (description === "") return;
+    if (description.trim() === "") return;
     onAddTodo({
       id: new Date().getTime(),
       description: description.trim(),
       done: false,
     });
+    onResetForm();
   };
   return (
     <>
